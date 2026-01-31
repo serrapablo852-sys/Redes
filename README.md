@@ -6,11 +6,11 @@
 
 ##  Portada
 
-**Alumno:** Nombre Apellidos  
+**Alumno:** Pablo Martinez Martinez 
 **Asignatura:** Servicios en Red  
-**Curso:** 2024 / 2025  
+**Curso:** 2025 / 2026  
 **Grupo:** 2º ASIX  
-**Centro:** ______________________  
+**Centro:** IES SERRA PERENXISAw 
 
 ---
 
