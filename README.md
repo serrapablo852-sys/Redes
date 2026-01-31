@@ -1,4 +1,4 @@
-# 📡 Servicios de Streaming
+# Servicios de Streaming
 ## Memoria – Servicios en Red
 ### 2º ASIX
 
