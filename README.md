@@ -4,7 +4,7 @@
 
 ---
 
-## 📘 Portada
+##  Portada
 
 **Alumno:** Nombre Apellidos  
 **Asignatura:** Servicios en Red  
@@ -14,7 +14,7 @@
 
 ---
 
-## 📚 Índice
+##  Índice
 
 1. Introducción  
 2. Descarga directa vs Streaming  
