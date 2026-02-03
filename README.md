@@ -245,7 +245,6 @@ Bitrate = 1 411 200 bps
 Calcular el tamaño de un audio sin comprimir de 3 minutos con un bitrate de 1 411 200 bps.
 
 #### Datos
-#### Datos
 Duración = 3 minutos = 180 segundos
 #### Cálculo
 Tamaño (bits) = 1 411 200 × 180
@@ -257,7 +256,7 @@ Tamaño (bytes) = resultado / 8
 #### Enunciado
 Una radio emite audio a 128 kbps y tiene 50 oyentes simultáneos.
 
-#### Fórmula
+
 #### Fórmula
 Ancho de banda total = Bitrate × Oyentes
 #### Cálculo
