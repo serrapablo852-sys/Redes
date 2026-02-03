@@ -147,6 +147,168 @@ Tipos:
 - Códecs sin pérdida: WAV, FLAC.
 
 ---
+## 8.1 Teoría de cálculo en servicios de streaming
+
+En los servicios de streaming es fundamental comprender cómo se calculan el tamaño de los archivos multimedia y el consumo de ancho de banda, ya que estos factores influyen directamente en la calidad del servicio, el número de usuarios simultáneos y la carga de la red.
+
+Tanto en audio como en vídeo, los cálculos se basan en parámetros técnicos como la frecuencia de muestreo, la profundidad de bits, el número de canales, la resolución o los fotogramas por segundo.
+
+---
+
+### Audio digital
+
+El audio digital representa el sonido mediante muestras tomadas a intervalos regulares.
+
+Los parámetros principales son:
+
+- **Frecuencia de muestreo (Hz):** número de muestras por segundo.
+- **Profundidad de bits:** número de bits usados para cada muestra.
+- **Canales:** mono (1), estéreo (2), etc.
+- **Bitrate:** cantidad de bits transmitidos por segundo.
+
+#### Fórmula del bitrate de audio sin comprimir
+
+Bitrate = Frecuencia × Profundidad de bits × Canales
+---
+
+### Tamaño de un archivo de audio
+
+Para calcular el tamaño de un archivo de audio sin comprimir:
+
+Tamaño (bits) = Bitrate × Duración (segundos)
+Tamaño (bytes) = Tamaño (bits) / 8
+---
+
+### Audio en streaming
+
+En streaming, el archivo no se descarga completo, pero **el ancho de banda consumido es igual al bitrate del audio** multiplicado por el número de oyentes simultáneos.
+
+Ancho de banda total = Bitrate × Número de oyentes
+---
+
+### Vídeo digital
+
+El vídeo digital está formado por una secuencia de imágenes (fotogramas) mostradas a gran velocidad.
+
+Parámetros principales:
+
+- **Resolución:** ancho × alto (por ejemplo, 1920 × 1080).
+- **FPS:** fotogramas por segundo.
+- **Profundidad de color:** bits por píxel.
+- **Bitrate de vídeo**
+- **Códec:** H.264, H.265, VP9, etc.
+
+---
+
+### Bitrate de vídeo sin comprimir
+
+Bitrate = Resolución × Profundidad de color × FPS
+---
+
+### Tamaño de un archivo de vídeo
+
+Tamaño = Bitrate × Duración
+En la práctica, los códecs reducen enormemente este valor mediante compresión.
+
+---
+
+### Impacto en la red
+
+En servicios de streaming, el consumo total de red depende de:
+
+- Bitrate del contenido
+- Número de usuarios conectados
+- Tipo de conexión (unicast o multicast)
+
+Una mala planificación puede provocar saturación, jitter o cortes en el servicio.
+
+---
+
+## 8.2 Práctica de cálculo – Servicios de Streaming
+
+### Ejercicio 1: Cálculo del bitrate de audio sin comprimir
+
+#### Enunciado
+Calcular el bitrate de un audio con las siguientes características:
+- Frecuencia de muestreo: 44 100 Hz
+- Profundidad de bits: 16 bits
+- Canales: 2 (estéreo)
+
+#### Fórmula
+Bitrate = Frecuencia × Bits × CanalesBitrate = 44100 × 16 × 2
+Bitrate = 1 411 200 bps
+---
+
+### Ejercicio 2: Tamaño de un archivo de audio
+
+#### Enunciado
+Calcular el tamaño de un audio sin comprimir de 3 minutos con un bitrate de 1 411 200 bps.
+
+#### Datos
+#### Datos
+Duración = 3 minutos = 180 segundos
+#### Cálculo
+Tamaño (bits) = 1 411 200 × 180
+Tamaño (bytes) = resultado / 8
+---
+
+### Ejercicio 3: Consumo de ancho de banda en una radio online
+
+#### Enunciado
+Una radio emite audio a 128 kbps y tiene 50 oyentes simultáneos.
+
+#### Fórmula
+#### Fórmula
+Ancho de banda total = Bitrate × Oyentes
+#### Cálculo
+Ancho de banda = 128 kbps × 50
+---
+
+### Ejercicio 4: Cálculo del bitrate de vídeo sin comprimir
+
+#### Enunciado
+Calcular el bitrate de un vídeo con:
+- Resolución: 1920 × 1080
+- Profundidad de color: 24 bits
+- FPS: 30
+
+#### Fórmula
+Bitrate = Ancho × Alto × Bits × FPS
+#### Cálculo
+#### Cálculo
+Bitrate = 1920 × 1080 × 24 × 30
+---
+
+### Ejercicio 5: Espacio necesario para vídeo
+
+#### Enunciado
+Calcular el espacio necesario para un vídeo de 10 minutos con un bitrate de 4 Mbps.
+
+#### Datos
+Duración = 10 minutos = 600 segundos
+#### Cálculo
+Tamaño (bits) = 4 000 000 × 600
+Tamaño (bytes) = resultado / 8
+---
+
+### Ejercicio 6: Número máximo de usuarios
+
+#### Enunciado
+Un servidor tiene una conexión de 100 Mbps y emite vídeo a 5 Mbps por usuario.
+
+#### Fórmula
+Usuarios máximos = Ancho de banda total / Bitrate por usuario
+#### Cálculo
+Usuarios = 100 / 5
+---
+
+### Observaciones finales
+
+En todos los ejercicios:
+- Es importante convertir correctamente las unidades.
+- Justificar cada paso del cálculo.
+- Analizar si los resultados son realistas para un entorno real.
+
 
 ## 9. Parte práctica de audio
 
