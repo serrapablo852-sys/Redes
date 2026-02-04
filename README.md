@@ -625,8 +625,130 @@ ffmpeg -i original.mp4 -c:v libx265 -b:v 2M -c:a copy h265.mp4
 - Número de usuarios simultáneos posibles.
 
 ---
+## 13. Conversion
+#  Tabla completa de conversiones (Audio, Vídeo, Red, Almacenamiento y Tiempo)
 
-## 13. Conclusión
+##  AUDIO
+
+### Frecuencia
+1 Hz  = 1 ciclo/segundo  
+1 kHz = 1.000 Hz  
+1 MHz = 1.000.000 Hz  
+
+### Profundidad de bits
+16 bits = 2 bytes  
+24 bits = 3 bytes  
+32 bits = 4 bytes  
+
+### Canales
+Mono   = 1 canal  
+Estéreo = 2 canales  
+
+---
+
+##  RED (BITRATE)
+
+### Bits y bytes
+1 byte = 8 bits  
+1 kilobyte (KB) = 1.000 bytes  
+1 megabyte (MB) = 1.000.000 bytes  
+1 gigabyte (GB) = 1.000.000.000 bytes  
+
+### Bitrate
+1 bps  = 1 bit/segundo  
+1 kbps = 1.000 bps  
+1 Mbps = 1.000.000 bps  
+1 Gbps = 1.000.000.000 bps  
+
+### Conversión rápida
+- De kbps a Mbps:  
+  Mbps = kbps / 1000  
+- De Mbps a kbps:  
+  kbps = Mbps × 1000  
+- De bps a bytes/s:  
+  bytes/s = bps / 8  
+
+---
+
+##  ALMACENAMIENTO
+
+### Bytes
+1 KB = 1.000 bytes  
+1 MB = 1.000.000 bytes  
+1 GB = 1.000.000.000 bytes  
+1 TB = 1.000 GB = 1.000.000.000.000 bytes  
+
+### Bits
+1 byte = 8 bits  
+1 KB = 8.000 bits  
+1 MB = 8.000.000 bits  
+1 GB = 8.000.000.000 bits  
+1 TB = 8.000.000.000.000 bits  
+
+---
+
+##  VÍDEO
+
+### Resoluciones típicas
+- 240p  = 426 × 240  
+- 480p  = 854 × 480  
+- 720p  = 1280 × 720  
+- 1080p = 1920 × 1080  
+- 4K    = 3840 × 2160  
+- 8K    = 7680 × 4320  
+
+### Profundidad de color
+8 bits  = 256 niveles por canal  
+10 bits = 1024 niveles por canal  
+12 bits = 4096 niveles por canal  
+24 bits = 8+8+8 (RGB estándar)  
+30 bits = 10+10+10 (HDR)  
+
+### FPS
+1 fps = 1 frame por segundo  
+60 fps = 60 frames por segundo  
+
+---
+
+##  TIEMPO
+
+1 minuto = 60 segundos  
+1 hora   = 3600 segundos  
+1 día    = 24 horas = 86.400 segundos  
+
+---
+
+##  FORMULAS DE CONVERSIÓN USADAS EN LOS EJERCICIOS
+
+### Audio sin comprimir (WAV)
+Peso(bits) = Frecuencia × Bits × Canales × Segundos  
+Peso(bytes) = Peso(bits) / 8  
+Peso(MB) = Peso(bytes) / 1.000.000  
+
+### Bitrate de audio PCM
+Bitrate(bps) = Frecuencia × Bits × Canales  
+
+### Streaming
+BW_total = Bitrate × Número_de_oyentes  
+
+### Vídeo RAW sin comprimir
+Bits_por_frame = (Ancho × Alto) × Profundidad  
+Bitrate = Bits_por_frame × FPS  
+Tamaño = Bitrate × Tiempo  
+
+### Vídeo comprimido
+Peso = Bitrate × Tiempo  
+
+### Capacidad de almacenamiento
+Segundos = Bits_totales / Bitrate  
+Horas = Segundos / 3600  
+
+### Capacidad de red
+Usuarios = Ancho_de_banda_total / Bitrate_por_usuario  
+
+
+---
+## 14. Conclusión
 
 A lo largo de esta unidad se han aprendido los conceptos básicos del streaming, los protocolos más utilizados y el funcionamiento de servidores de audio y vídeo.  
 Las prácticas han permitido trabajar con herramientas reales como Icecast, Mixxx y FFmpeg.
