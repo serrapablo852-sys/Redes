@@ -10,7 +10,7 @@
 **Asignatura:** Servicios en Red  
 **Curso:** 2025 / 2026  
 **Grupo:** 2º ASIX  
-**Centro:** IES SERRA PERENXISAw 
+**Centro:** IES SERRA PERENXISA
 
 ---
 
@@ -28,7 +28,7 @@
 10. Vídeo digital  
 11. Parte práctica de vídeo  
 12. Prácticas completas paso a paso  
-13. Conversion
+13. Conversiones
 14. Conclusión  
 
 ---
@@ -696,7 +696,7 @@ ffmpeg -i original.mp4 -c:v libx265 -b:v 2M -c:a copy h265.mp4
 - Número de usuarios simultáneos posibles.
 
 ---
-## 13. Conversion
+## 13. Conversiones
 #  Tabla completa de conversiones (Audio, Vídeo, Red, Almacenamiento y Tiempo)
 
 ##  AUDIO
