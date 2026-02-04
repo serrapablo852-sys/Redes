@@ -300,7 +300,157 @@ Usuarios máximos = Ancho de banda total / Bitrate por usuario
 #### Cálculo
 Usuarios = 100 / 5
 ---
+ Ejercicios de Cálculo – Streaming, Audio y Vídeo
 
+Formato Markdown listo para GitHub
+##  Cálculo de Peso – Audio
+ Conversión de unidades usadas
+
+    1 kHz=1000 Hz
+
+    1 kbps=1000 bps
+
+    1 Mbps=1 000 000 bps
+
+    1 byte=8 bits
+
+    1 MB=1 000 000 bytes
+
+    1 GB=1 000 000 000 bytes
+---
+### 1. Peso WAV de 5 minutos (44.1 kHz, 16 bits, estéreo)
+Conversión previa
+
+    Frecuencia:
+    44.1 kHz=44 100 Hz
+
+    Tiempo:
+    5 min=300 s
+
+Cálculo
+Peso(bits)=44100×16×2×300
+44100×16=705600
+705600×2=1411200
+1411200×300=423360000 bits
+
+Conversión a bytes:
+4233600008=52920000 bytes
+
+Conversión a MB:
+52920000106≈52.92 MB
+ Resultado: ~52.9 MB
+ ---
+### 2. Streaming MP3 128 kbps con 25 oyentes
+Conversión previa
+128 kbps=128 000 bps
+Cálculo
+128×25=3200 kbps
+3200 kbps=3.2 Mbps
+ Resultado: 3.2 Mbps de subida
+ ---
+### 3. Bitrate de audio 48 kHz, 24 bits, mono
+Conversión previa
+48 kHz=48 000 Hz
+Cálculo
+48000×24×1=1152000 bps
+1152000 bps=1.152 Mbps
+ Resultado: 1.152 Mbps
+ ---
+### 4. Servidor 10 Mbps → oyentes a 192 kbps
+Conversión previa
+10 Mbps=10 000 kbps
+Cálculo
+10000192≈52.08
+ Resultado: 52 oyentes
+ Cálculo de Peso – Vídeo
+ Conversión de unidades usadas
+
+    1 Gbps=1 000 000 000 bps
+
+    1 TB=1 000 GB
+
+    1 GB=8 000 000 000 bits
+---
+## Ejercicio 1 – RAW 4K, 60 fps, 30 bits
+Datos
+
+    Resolución:
+    3840×2160=8 294 400 píxeles
+
+    Profundidad: 30 bits
+
+    FPS: 60
+
+A. Bitrate en Gbps
+8294400×30=248832000 bits/frame
+248832000×60=14929920000 bps
+14929920000109≈14.93 Gbps
+ Resultado: ~14.9 Gbps
+ 
+B. Tamaño de 10 segundos
+14.93 Gbps×10=149.3 Gbit
+Conversión a GB:
+149.3×1098×109=18.66 GB
+ Resultado: ~18.7 GB
+ 
+C. Minutos que caben en 1 TB
+Conversión previa
+1 TB=1000 GB=8×1012 bits
+Segundos=8×101214.93×109≈536 s
+53660≈8.93 min
+ Resultado: ~9 minutos
+ ---
+## Ejercicio 2 – Streaming YouTube 1080p
+A. Porcentaje de uso de la línea
+620=0.30=30%
+ Resultado: 30% de la subida
+B. Si 4 alumnos emiten a 6 Mbps
+6×4=24 Mbps
+
+La línea es de 20 Mbps → se supera.
+Consecuencias técnicas:
+
+    Buffering constante
+
+    Aumento de latencia
+
+    Pérdida de frames
+
+    Congestión de red
+
+ Resultado: la emisión se degrada o se corta
+C. Solución técnica
+
+Para que 4 alumnos emitan sin saturar:
+Lıˊmite=20 Mbps
+
+Si cada uno usa 4 Mbps:
+4×4=16 Mbps
+Soluciones válidas:
+
+    Reducir bitrate a 4 Mbps
+
+    Bajar resolución a 720p
+
+    Usar codificación más eficiente (H.265)
+
+    Emitir a través de un único encoder y redistribuir localmente
+---
+ Resultado: bajar bitrate a 4 Mbps por alumno
+## Preguntas finales – Simulación de Streaming
+1. Almacenamiento: 500 GB → horas a 2 Mbps
+Conversión previa
+500 GB=4×1012 bits
+Segundos=4×10122×106=2×106 s
+Horas=2×1063600≈555.56
+ Resultado: ~555 horas (~23 días)
+2. Red: 100 Mbps → usuarios a 400 kbps (80% límite)
+Conversión previa
+80% de 100 Mbps=80 Mbps
+400 kbps=0.4 Mbps
+800.4=200
+ Resultado: 200 usuarios simultáneos
+---
 ### Observaciones finales
 
 En todos los ejercicios:
