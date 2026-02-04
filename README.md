@@ -217,7 +217,7 @@ bytes ≈ 31.75 MB
 
 5. **Peso vídeo comprimido:**  
    Peso = Bitrate × Tiempo
-
+---
 ## 8.1 Teoría de cálculo en servicios de streaming
 
 En los servicios de streaming es fundamental comprender cómo se calculan el tamaño de los archivos multimedia y el consumo de ancho de banda, ya que estos factores influyen directamente en la calidad del servicio, el número de usuarios simultáneos y la carga de la red.
@@ -240,6 +240,7 @@ Los parámetros principales son:
 #### Fórmula del bitrate de audio sin comprimir
 
 Bitrate = Frecuencia × Profundidad de bits × Canales
+
 ---
 
 ### Tamaño de un archivo de audio
@@ -248,6 +249,7 @@ Para calcular el tamaño de un archivo de audio sin comprimir:
 
 Tamaño (bits) = Bitrate × Duración (segundos)
 Tamaño (bytes) = Tamaño (bits) / 8
+
 ---
 
 ### Audio en streaming
@@ -255,6 +257,7 @@ Tamaño (bytes) = Tamaño (bits) / 8
 En streaming, el archivo no se descarga completo, pero **el ancho de banda consumido es igual al bitrate del audio** multiplicado por el número de oyentes simultáneos.
 
 Ancho de banda total = Bitrate × Número de oyentes
+
 ---
 
 ### Vídeo digital
@@ -274,6 +277,7 @@ Parámetros principales:
 ### Bitrate de vídeo sin comprimir
 
 Bitrate = Resolución × Profundidad de color × FPS
+
 ---
 
 ### Tamaño de un archivo de vídeo
@@ -308,6 +312,7 @@ Calcular el bitrate de un audio con las siguientes características:
 #### Fórmula
 Bitrate = Frecuencia × Bits × CanalesBitrate = 44100 × 16 × 2
 Bitrate = 1 411 200 bps
+
 ---
 
 ### Ejercicio 2: Tamaño de un archivo de audio
@@ -425,7 +430,7 @@ Conversión previa
 Cálculo
 128×25=3200 kbps
 3200 kbps=3.2 Mbps
- Resultado: 3.2 Mbps de subida
+Resultado: 3.2 Mbps de subida
  
 ---
 ### 3. Bitrate de audio 48 kHz, 24 bits, mono
@@ -501,6 +506,7 @@ Consecuencias técnicas:
     Congestión de red
 
  Resultado: la emisión se degrada o se corta
+ 
 C. Solución técnica
 
 Para que 4 alumnos emitan sin saturar:
@@ -531,7 +537,7 @@ Segundos=4×10122×106=2×106 s
 Horas=2×1063600≈555.56
  Resultado: ~555 horas (~23 días)
 
-3. Red: 100 Mbps → usuarios a 400 kbps (80% límite)
+2. Red: 100 Mbps → usuarios a 400 kbps (80% límite)
 Conversión previa
 80% de 100 Mbps=80 Mbps
 400 kbps=0.4 Mbps
@@ -625,16 +631,16 @@ En esta parte se realizan ejercicios sobre:
 
 1. Crear otra máquina virtual con Ubuntu 24.
    
-3. Configurar la red en adaptador puente.
+2. Configurar la red en adaptador puente.
    
-5. Comprobar el sonido.
+3. Comprobar el sonido.
    
-7. Instalar Mixxx:
+3. Instalar Mixxx:
    sudo add-apt-repository ppa:mixxx/mixxx
 sudo apt update
 sudo apt install mixxx
 
-9. Abrir Mixxx y configurar la emisión:
+5. Abrir Mixxx y configurar la emisión:
 - Tipo: Icecast2
 - IP del servidor
 - Puerto: 8000
@@ -762,51 +768,7 @@ Estéreo = 2 canales
   kbps = Mbps × 1000  
 - De bps a bytes/s:  
   bytes/s = bps / 8  
-def f(v):
 
-    if v % 2 == 1:
-
-        return v + 1
-
-    else:
-
-        return v // 2
-
- 
-
-m = [
-
-    [5, 2, 3, 4, 6],
-
-    [1, 7, 8, 0, 9]
-
-]
-
- 
-
-res = []
-
-count = 0
-
-for i in range(len(m)):
-
-    fila = []
-
-    for j in range(len(m[0])):
-
-        t = f(m[i][j])
-
-        fila.append(t)
-
-        if (t % 3 == 0) or (t == 0):
-
-            count += 1
-
-    res.append(fila)
-
- 
-
-print(res[0][0], res[1][3], count)
 ---
 
 ##  ALMACENAMIENTO
@@ -856,51 +818,7 @@ print(res[0][0], res[1][3], count)
 
 ##  TIEMPO
 
-1 minuto = 60 segundos  def f(v):
-
-    if v % 2 == 1:
-
-        return v + 1
-
-    else:
-
-        return v // 2
-
- 
-
-m = [
-
-    [5, 2, 3, 4, 6],
-
-    [1, 7, 8, 0, 9]
-
-]
-
- 
-
-res = []
-
-count = 0
-
-for i in range(len(m)):
-
-    fila = []
-
-    for j in range(len(m[0])):
-
-        t = f(m[i][j])
-
-        fila.append(t)
-
-        if (t % 3 == 0) or (t == 0):
-
-            count += 1
-
-    res.append(fila)
-
- 
-
-print(res[0][0], res[1][3], count)
+1 minuto = 60 segundos 
 1 hora   = 3600 segundos  
 1 día    = 24 horas = 86.400 segundos  
 
