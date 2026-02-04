@@ -147,6 +147,76 @@ Tipos:
 - Códecs sin pérdida: WAV, FLAC.
 
 ---
+# 📘 Fórmulas del PDF – Streaming, Audio y Vídeo
+
+---
+
+# 🎧 AUDIO
+
+## Cálculo de peso (audio sin compresión)
+**Fórmula dada en el PDF:**
+
+Peso = Frecuencia × Bits × Canales × Segundos
+
+Ejemplo del PDF:
+P = 44100 × 16 × 2 × 3 × 60
+
+Conversión usada en el PDF:
+Peso(bits) / 8 = Peso(bytes)
+
+---
+
+# 🔌 STREAMING
+
+## Cálculo de ancho de banda total (Unicast)
+**Fórmula del PDF:**
+
+BW(tot) = BW(stream) × N(usuarios)
+
+---
+
+# 🎥 VÍDEO
+
+## Cálculo de peso (vídeo sin comprimir)
+**Fórmula del PDF:**
+
+Peso = (Ancho × Alto) × Profundidad de color × FPS × Tiempo
+
+---
+
+## Cálculo de peso (vídeo comprimido)
+**Fórmula del PDF:**
+
+Peso = Bitrate × Tiempo
+
+---
+
+# EJEMPLOS (convertidos a fórmula)
+
+## Audio WAV (ejemplo del PDF)
+P = 44100 × 16 × 2 × 3 × 60  
+P / 8 = bytes  
+bytes ≈ 31.75 MB
+
+---
+
+#  RESUMEN DE TODAS LAS FÓRMULAS DEL PDF
+
+1. **Peso audio sin compresión:**  
+   Peso = Frecuencia × Bits × Canales × Segundos
+
+2. **Conversión bits → bytes:**  
+   bytes = bits / 8
+
+3. **Ancho de banda total en Unicast:**  
+   BW(tot) = BW(stream) × N(usuarios)
+
+4. **Peso vídeo sin comprimir:**  
+   Peso = (Ancho × Alto) × Profundidad × FPS × Tiempo
+
+5. **Peso vídeo comprimido:**  
+   Peso = Bitrate × Tiempo
+
 ## 8.1 Teoría de cálculo en servicios de streaming
 
 En los servicios de streaming es fundamental comprender cómo se calculan el tamaño de los archivos multimedia y el consumo de ancho de banda, ya que estos factores influyen directamente en la calidad del servicio, el número de usuarios simultáneos y la carga de la red.
