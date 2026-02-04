@@ -307,7 +307,7 @@ Usuarios máximos = Ancho de banda total / Bitrate por usuario
 Usuarios = 100 / 5
 
 ---
- Ejercicios de Cálculo – Streaming, Audio y Vídeo
+# Ejercicios de Cálculo – Streaming, Audio y Vídeo
 
 Formato Markdown listo para GitHub
 ##  Cálculo de Peso – Audio
@@ -348,7 +348,7 @@ Conversión a MB:
 52920000106≈52.92 MB
  Resultado: ~52.9 MB
  
- ---
+---
 ### 2. Streaming MP3 128 kbps con 25 oyentes
 Conversión previa
 128 kbps=128 000 bps
@@ -357,7 +357,7 @@ Cálculo
 3200 kbps=3.2 Mbps
  Resultado: 3.2 Mbps de subida
  
- ---
+---
 ### 3. Bitrate de audio 48 kHz, 24 bits, mono
 Conversión previa
 48 kHz=48 000 Hz
@@ -366,7 +366,7 @@ Cálculo
 1152000 bps=1.152 Mbps
  Resultado: 1.152 Mbps
  
- ---
+---
 ### 4. Servidor 10 Mbps → oyentes a 192 kbps
 Conversión previa
 10 Mbps=10 000 kbps
@@ -411,7 +411,7 @@ Segundos=8×101214.93×109≈536 s
 53660≈8.93 min
  Resultado: ~9 minutos
  
- ---
+---
 ## Ejercicio 2 – Streaming YouTube 1080p
 A. Porcentaje de uso de la línea
 620=0.30=30%
@@ -448,7 +448,7 @@ Soluciones válidas:
 
     Emitir a través de un único encoder y redistribuir localmente
 ---
- Resultado: bajar bitrate a 4 Mbps por alumno
+Resultado: bajar bitrate a 4 Mbps por alumno
 ## Preguntas finales – Simulación de Streaming
 1. Almacenamiento: 500 GB → horas a 2 Mbps
 Conversión previa
