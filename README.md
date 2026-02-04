@@ -148,7 +148,7 @@ Tipos:
 - Códecs sin pérdida: WAV, FLAC.
 
 ---
-#  Fórmulas del PDF – Streaming, Audio y Vídeo
+#  Fórmulas – Streaming, Audio y Vídeo
 
 ---
 
@@ -201,7 +201,7 @@ bytes ≈ 31.75 MB
 
 ---
 
-#  RESUMEN DE TODAS LAS FÓRMULAS DEL PDF
+#  RESUMEN DE TODAS LAS FÓRMULAS
 
 1. **Peso audio sin compresión:**  
    Peso = Frecuencia × Bits × Canales × Segundos
@@ -380,7 +380,6 @@ Usuarios = 100 / 5
 ---
 # Ejercicios de Cálculo – Streaming, Audio y Vídeo
 
-Formato Markdown listo para GitHub
 ##  Cálculo de Peso – Audio
  Conversión de unidades usadas
 
@@ -518,8 +517,12 @@ Soluciones válidas:
     Usar codificación más eficiente (H.265)
 
     Emitir a través de un único encoder y redistribuir localmente
+    
+    Resultado: bajar bitrate a 4 Mbps por alumno
+    
 ---
-Resultado: bajar bitrate a 4 Mbps por alumno
+
+
 ## Preguntas finales – Simulación de Streaming
 1. Almacenamiento: 500 GB → horas a 2 Mbps
 Conversión previa
@@ -527,7 +530,8 @@ Conversión previa
 Segundos=4×10122×106=2×106 s
 Horas=2×1063600≈555.56
  Resultado: ~555 horas (~23 días)
-2. Red: 100 Mbps → usuarios a 400 kbps (80% límite)
+
+3. Red: 100 Mbps → usuarios a 400 kbps (80% límite)
 Conversión previa
 80% de 100 Mbps=80 Mbps
 400 kbps=0.4 Mbps
@@ -599,14 +603,19 @@ En esta parte se realizan ejercicios sobre:
 #### 1. Configuración del servidor (Ubuntu 24)
 
 1. Crear una máquina virtual con Ubuntu 24.
-2. Configurar la red en modo adaptador puente.
-3. Comprobar que el sistema tiene sonido.
-4. Actualizar el sistema:
+   
+3. Configurar la red en modo adaptador puente.
+   
+4. Comprobar que el sistema tiene sonido.
+   
+5. Actualizar el sistema:
    sudo apt update
+
 6. Instalar Icecast2:
    sudo apt install icecast2
 7. Configurar las contraseñas durante la instalación.
-8. Acceder desde un navegador a:
+   
+9. Acceder desde un navegador a:
    http://IP_DEL_SERVIDOR:8000
    para comprobar que el servidor funciona.
 
@@ -615,13 +624,17 @@ En esta parte se realizan ejercicios sobre:
 #### Configuración del DJ (Ubuntu 24)
 
 1. Crear otra máquina virtual con Ubuntu 24.
-2. Configurar la red en adaptador puente.
-3. Comprobar el sonido.
-4. Instalar Mixxx:
+   
+3. Configurar la red en adaptador puente.
+   
+5. Comprobar el sonido.
+   
+7. Instalar Mixxx:
    sudo add-apt-repository ppa:mixxx/mixxx
 sudo apt update
 sudo apt install mixxx
-5. Abrir Mixxx y configurar la emisión:
+
+9. Abrir Mixxx y configurar la emisión:
 - Tipo: Icecast2
 - IP del servidor
 - Puerto: 8000
@@ -665,9 +678,10 @@ ffprobe -v error -show_streams fichero.mp4
 
 #### Cambio de contenedor (Remuxing)
 
-1. Ejecutar:
+ Ejecutar:
 ffmpeg -i original.mp4 -c:v copy -c:a copy salida.mkv
-2. Comprobar:
+
+Comprobar:
 - Tamaño del archivo.
 - Tiempo empleado.
 - Uso de CPU.
@@ -678,8 +692,10 @@ ffmpeg -i original.mp4 -c:v copy -c:a copy salida.mkv
 
 1. Crear una versión en H.264:
 ffmpeg -i original.mp4 -c:v libx264 -b:v 2M -c:a copy h264.mp4
+
 2. Crear una versión en H.265:
 ffmpeg -i original.mp4 -c:v libx265 -b:v 2M -c:a copy h265.mp4
+
 3. Comparar:
 - Calidad de imagen.
 - Aparición de artefactos.
@@ -690,7 +706,9 @@ ffmpeg -i original.mp4 -c:v libx265 -b:v 2M -c:a copy h265.mp4
 #### Simulación de perfiles de streaming
 
 1. Crear un perfil de baja calidad (móvil).
+   
 2. Crear un perfil de alta calidad (1080p).
+   
 3. Analizar:
 - Espacio necesario en disco.
 - Número de usuarios simultáneos posibles.
@@ -702,16 +720,19 @@ ffmpeg -i original.mp4 -c:v libx265 -b:v 2M -c:a copy h265.mp4
 ##  AUDIO
 
 ### Frecuencia
+
 1 Hz  = 1 ciclo/segundo  
 1 kHz = 1.000 Hz  
 1 MHz = 1.000.000 Hz  
 
 ### Profundidad de bits
+
 16 bits = 2 bytes  
 24 bits = 3 bytes  
 32 bits = 4 bytes  
 
 ### Canales
+
 Mono   = 1 canal  
 Estéreo = 2 canales  
 
@@ -720,36 +741,85 @@ Estéreo = 2 canales
 ##  RED (BITRATE)
 
 ### Bits y bytes
+
 1 byte = 8 bits  
 1 kilobyte (KB) = 1.000 bytes  
 1 megabyte (MB) = 1.000.000 bytes  
 1 gigabyte (GB) = 1.000.000.000 bytes  
 
 ### Bitrate
+
 1 bps  = 1 bit/segundo  
 1 kbps = 1.000 bps  
 1 Mbps = 1.000.000 bps  
 1 Gbps = 1.000.000.000 bps  
 
 ### Conversión rápida
+
 - De kbps a Mbps:  
   Mbps = kbps / 1000  
 - De Mbps a kbps:  
   kbps = Mbps × 1000  
 - De bps a bytes/s:  
   bytes/s = bps / 8  
+def f(v):
 
+    if v % 2 == 1:
+
+        return v + 1
+
+    else:
+
+        return v // 2
+
+ 
+
+m = [
+
+    [5, 2, 3, 4, 6],
+
+    [1, 7, 8, 0, 9]
+
+]
+
+ 
+
+res = []
+
+count = 0
+
+for i in range(len(m)):
+
+    fila = []
+
+    for j in range(len(m[0])):
+
+        t = f(m[i][j])
+
+        fila.append(t)
+
+        if (t % 3 == 0) or (t == 0):
+
+            count += 1
+
+    res.append(fila)
+
+ 
+
+print(res[0][0], res[1][3], count)
 ---
 
 ##  ALMACENAMIENTO
 
 ### Bytes
+
 1 KB = 1.000 bytes  
 1 MB = 1.000.000 bytes  
 1 GB = 1.000.000.000 bytes  
 1 TB = 1.000 GB = 1.000.000.000.000 bytes  
 
 ### Bits
+
 1 byte = 8 bits  
 1 KB = 8.000 bits  
 1 MB = 8.000.000 bits  
@@ -761,6 +831,7 @@ Estéreo = 2 canales
 ##  VÍDEO
 
 ### Resoluciones típicas
+
 - 240p  = 426 × 240  
 - 480p  = 854 × 480  
 - 720p  = 1280 × 720  
@@ -769,6 +840,7 @@ Estéreo = 2 canales
 - 8K    = 7680 × 4320  
 
 ### Profundidad de color
+
 8 bits  = 256 niveles por canal  
 10 bits = 1024 niveles por canal  
 12 bits = 4096 niveles por canal  
@@ -776,6 +848,7 @@ Estéreo = 2 canales
 30 bits = 10+10+10 (HDR)  
 
 ### FPS
+
 1 fps = 1 frame por segundo  
 60 fps = 60 frames por segundo  
 
@@ -783,7 +856,51 @@ Estéreo = 2 canales
 
 ##  TIEMPO
 
-1 minuto = 60 segundos  
+1 minuto = 60 segundos  def f(v):
+
+    if v % 2 == 1:
+
+        return v + 1
+
+    else:
+
+        return v // 2
+
+ 
+
+m = [
+
+    [5, 2, 3, 4, 6],
+
+    [1, 7, 8, 0, 9]
+
+]
+
+ 
+
+res = []
+
+count = 0
+
+for i in range(len(m)):
+
+    fila = []
+
+    for j in range(len(m[0])):
+
+        t = f(m[i][j])
+
+        fila.append(t)
+
+        if (t % 3 == 0) or (t == 0):
+
+            count += 1
+
+    res.append(fila)
+
+ 
+
+print(res[0][0], res[1][3], count)
 1 hora   = 3600 segundos  
 1 día    = 24 horas = 86.400 segundos  
 
@@ -792,29 +909,36 @@ Estéreo = 2 canales
 ##  FORMULAS DE CONVERSIÓN USADAS EN LOS EJERCICIOS
 
 ### Audio sin comprimir (WAV)
+
 Peso(bits) = Frecuencia × Bits × Canales × Segundos  
 Peso(bytes) = Peso(bits) / 8  
 Peso(MB) = Peso(bytes) / 1.000.000  
 
 ### Bitrate de audio PCM
+
 Bitrate(bps) = Frecuencia × Bits × Canales  
 
 ### Streaming
+
 BW_total = Bitrate × Número_de_oyentes  
 
 ### Vídeo RAW sin comprimir
+
 Bits_por_frame = (Ancho × Alto) × Profundidad  
 Bitrate = Bits_por_frame × FPS  
 Tamaño = Bitrate × Tiempo  
 
 ### Vídeo comprimido
+
 Peso = Bitrate × Tiempo  
 
 ### Capacidad de almacenamiento
+
 Segundos = Bits_totales / Bitrate  
 Horas = Segundos / 3600  
 
 ### Capacidad de red
+
 Usuarios = Ancho_de_banda_total / Bitrate_por_usuario  
 
 
