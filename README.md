@@ -245,10 +245,12 @@ Bitrate = 1 411 200 bps
 Calcular el tamaño de un audio sin comprimir de 3 minutos con un bitrate de 1 411 200 bps.
 
 #### Datos
-Duración = 3 minutos = 180 segundos
-#### Cálculo
+Duración = 3 minutos = 180 segundos  
+#### Cálculo  
+
 Tamaño (bits) = 1 411 200 × 180
 Tamaño (bytes) = resultado / 8
+
 ---
 
 ### Ejercicio 3: Consumo de ancho de banda en una radio online
@@ -261,6 +263,7 @@ Una radio emite audio a 128 kbps y tiene 50 oyentes simultáneos.
 Ancho de banda total = Bitrate × Oyentes
 #### Cálculo
 Ancho de banda = 128 kbps × 50
+
 ---
 
 ### Ejercicio 4: Cálculo del bitrate de vídeo sin comprimir
@@ -276,6 +279,7 @@ Bitrate = Ancho × Alto × Bits × FPS
 #### Cálculo
 #### Cálculo
 Bitrate = 1920 × 1080 × 24 × 30
+
 ---
 
 ### Ejercicio 5: Espacio necesario para vídeo
@@ -287,7 +291,9 @@ Calcular el espacio necesario para un vídeo de 10 minutos con un bitrate de 4 M
 Duración = 10 minutos = 600 segundos
 #### Cálculo
 Tamaño (bits) = 4 000 000 × 600
+
 Tamaño (bytes) = resultado / 8
+
 ---
 
 ### Ejercicio 6: Número máximo de usuarios
@@ -299,6 +305,7 @@ Un servidor tiene una conexión de 100 Mbps y emite vídeo a 5 Mbps por usuario.
 Usuarios máximos = Ancho de banda total / Bitrate por usuario
 #### Cálculo
 Usuarios = 100 / 5
+
 ---
  Ejercicios de Cálculo – Streaming, Audio y Vídeo
 
@@ -318,6 +325,7 @@ Formato Markdown listo para GitHub
 
     1 GB=1 000 000 000 bytes
 ---
+
 ### 1. Peso WAV de 5 minutos (44.1 kHz, 16 bits, estéreo)
 Conversión previa
 
@@ -339,6 +347,7 @@ Conversión a bytes:
 Conversión a MB:
 52920000106≈52.92 MB
  Resultado: ~52.9 MB
+ 
  ---
 ### 2. Streaming MP3 128 kbps con 25 oyentes
 Conversión previa
@@ -347,6 +356,7 @@ Cálculo
 128×25=3200 kbps
 3200 kbps=3.2 Mbps
  Resultado: 3.2 Mbps de subida
+ 
  ---
 ### 3. Bitrate de audio 48 kHz, 24 bits, mono
 Conversión previa
@@ -355,6 +365,7 @@ Cálculo
 48000×24×1=1152000 bps
 1152000 bps=1.152 Mbps
  Resultado: 1.152 Mbps
+ 
  ---
 ### 4. Servidor 10 Mbps → oyentes a 192 kbps
 Conversión previa
@@ -399,6 +410,7 @@ Conversión previa
 Segundos=8×101214.93×109≈536 s
 53660≈8.93 min
  Resultado: ~9 minutos
+ 
  ---
 ## Ejercicio 2 – Streaming YouTube 1080p
 A. Porcentaje de uso de la línea
@@ -450,6 +462,7 @@ Conversión previa
 400 kbps=0.4 Mbps
 800.4=200
  Resultado: 200 usuarios simultáneos
+
 ---
 ### Observaciones finales
 
