@@ -148,11 +148,11 @@ Tipos:
 - Códecs sin pérdida: WAV, FLAC.
 
 ---
-# 📘 Fórmulas del PDF – Streaming, Audio y Vídeo
+#  Fórmulas del PDF – Streaming, Audio y Vídeo
 
 ---
 
-# 🎧 AUDIO
+#  AUDIO
 
 ## Cálculo de peso (audio sin compresión)
 **Fórmula dada en el PDF:**
@@ -167,7 +167,7 @@ Peso(bits) / 8 = Peso(bytes)
 
 ---
 
-# 🔌 STREAMING
+#  STREAMING
 
 ## Cálculo de ancho de banda total (Unicast)
 **Fórmula del PDF:**
@@ -176,7 +176,7 @@ BW(tot) = BW(stream) × N(usuarios)
 
 ---
 
-# 🎥 VÍDEO
+#  VÍDEO
 
 ## Cálculo de peso (vídeo sin comprimir)
 **Fórmula del PDF:**
