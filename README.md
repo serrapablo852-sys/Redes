@@ -155,7 +155,7 @@ Tipos:
 #  AUDIO
 
 ## Cálculo de peso (audio sin compresión)
-**Fórmula dada en el PDF:**
+**Fórmula:**
 
 Peso = Frecuencia × Bits × Canales × Segundos
 
@@ -170,7 +170,7 @@ Peso(bits) / 8 = Peso(bytes)
 #  STREAMING
 
 ## Cálculo de ancho de banda total (Unicast)
-**Fórmula del PDF:**
+**Fórmula:**
 
 BW(tot) = BW(stream) × N(usuarios)
 
@@ -179,14 +179,14 @@ BW(tot) = BW(stream) × N(usuarios)
 #  VÍDEO
 
 ## Cálculo de peso (vídeo sin comprimir)
-**Fórmula del PDF:**
+**Fórmula:**
 
 Peso = (Ancho × Alto) × Profundidad de color × FPS × Tiempo
 
 ---
 
 ## Cálculo de peso (vídeo comprimido)
-**Fórmula del PDF:**
+**Fórmula :**
 
 Peso = Bitrate × Tiempo
 
@@ -194,7 +194,7 @@ Peso = Bitrate × Tiempo
 
 # EJEMPLOS (convertidos a fórmula)
 
-## Audio WAV (ejemplo del PDF)
+## Audio WAV
 P = 44100 × 16 × 2 × 3 × 60  
 P / 8 = bytes  
 bytes ≈ 31.75 MB
